@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300;400;500;600;700;800&family=Tilt+Neon&display=swap');
+
+*{
+    outline: none;
+    border: none;
+    padding: none;
+    color: azure;
+    font-family: 'Tilt Neon', sans-serif;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+html{
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+
+.container{
+    padding: 2rem 4rem;
+    height: auto;
+    width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.heading-container{
+    position: relative;
+    background: rgba(0, 0, 0, .2);
+    width: 50%;
+    height: 5rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 4.5rem;
+    cursor: pointer;
+    transition: box-shadow .7s;
+}
+.heading-container:hover{
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, .4);
+}
+.heading-1{
+    text-align: center;
+    font-family: 'Shantell Sans', sans-serif;
+    white-space: nowrap;
+}
+.bookmarks-container{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.bookmark-link{
+    text-decoration: none;
+    margin: 1rem 2rem;
+}
+.bookmark {
+    width: 13rem;
+    padding: 1rem;
+    height: 5rem;
+    background: rgba(0, 0, 0, .4);
+    border-radius: .6rem 0 .6rem .6rem;
+    box-shadow: 0 0 5px 2px rgba(200, 200, 200, .4);
+    position: relative;
+}
+.bookmark:hover{
+    box-shadow: 0 0 5px 5px rgba(200, 200, 200, .4);
+}
+.cancel-container{
+    width: 2rem;
+    height: 2rem;
+    border: solid .1rem azure;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    transition: filter .3s;
+}
+.line-1{
+    width: .1rem;
+    height: 1.3rem;
+    position: absolute;
+    background-color: azure;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.line-2{
+    width: .1rem;
+    height: 1.3rem;
+    position: absolute;
+    background-color: azure;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+.cancel-container:hover{
+    filter: brightness(70%);
+}
+.bookmark-name{
+    position: absolute;
+    top: 60;
+}
+/* create form style */
+.create-heading{
+    font-family: 'Shantell Sans', sans-serif;
+    font-size: 3rem;
+    text-shadow: 2px 2px 8px rgba(255, 215, 0, .8);
+    margin-bottom: 2rem;
+}
+.create-form-container{
+    z-index: 20;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, .6);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    padding: 2rem;
+}
+.create-form-container.change{
+    display: flex;
+    position: fixed;
+    top: 0;
+    opacity: 1;
+}
+.create-form-container form{
+    background: rgba(0, 0, 0, .7);
+    border-radius: 2rem;
+    padding: 3rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bookmark-form div{
+    margin: .5rem;
+}
+.bookmark-form label{
+    font-family: 'Shantell Sans';
+    margin-right: .5rem;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+.bookmark-form input[type="text"]{
+    width: 25rem;
+    height: 3rem;
+    border-radius: 3rem;
+    border: none;
+    padding: .5rem;
+    background: rgba(93, 91, 91, 0.4);
+    color: azure;
+    font-size: 1rem;
+    padding-left: 1rem;
+}
+
+.form-btn{
+    width: 100%;
+    border-radius: 4rem;
+    height: 3rem;
+    margin: 2rem;
+    margin-top: 1rem;
+    background-color: #76737366;
+    color: azure;
+    font-family: 'Shantell Sans', sans-serif;
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    transition: .3s;
+}
+.form-btn:hover{
+    scale: 1.03;
+}
+.form-cancel{
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    transform: translate(-100%, 70%);
+}
+.form-cancel .line-1, .form-cancel .line-2{
+    height: 2rem;
+}
+/* end of create form */
+/* secess and warning alert in form */
+.alert-wrapper{
+    width: 60%;
+    height: 3rem;
+    border-radius: .7rem;
+}
+.alert{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .7rem;
+    visibility: hidden;
+}
+.alert-warning{
+    background-color: rgba(255, 193, 7, .6);
+}
+.alert-sucess{
+    background-color: rgba(40, 167, 69, .6);
+}
+.alert-message{
+    font-size: larger;
+    font-weight: bolder;
+    letter-spacing: .6px;
+    font-family: 'Shantell Sans', sans-serif;
+}

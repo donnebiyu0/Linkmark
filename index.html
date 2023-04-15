@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmarks</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading-container">
+        <h1 class="heading-1">ADD BOOKMARK</h1>
+      </div>
+      <div class="bookmarks-container">
+        <a href="http://example.com" class="bookmark-link">
+          <div class="bookmark">
+            <div class="cancel-container book-cancel">
+              <div class="line-1"></div>
+              <div class="line-2"></div>
+            </div>
+            <p class="bookmark-name">Name</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="create-form-container">
+      <div class="cancel-container form-cancel">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+      </div>
+      <div class="alert-wrapper">
+        <div class="alert alert-warning">
+          <p class="alert-message"></p>
+        </div>
+      </div>
+      <h3 class="create-heading">Create New Bookmark</h3>
+      <form class="bookmark-form">
+        <div class="name-wrapper">
+          <!-- <label for="name">Name</label> -->
+          <input type="text" placeholder="Name" id="name" autofocus()/>
+        </div>
+        <div class="url-wrapper">
+          <!-- <label for="url">URL</label> -->
+          <input type="text" placeholder="URL" id="url" />
+        </div>
+        <input type="button" value="Create" class="form-btn" />
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
