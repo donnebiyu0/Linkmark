@@ -99,7 +99,7 @@ let regEx = new RegExp(expression);
 formBtn.addEventListener('click', ()=>{
     let name = nameField.value
     let url = urlField.value
-    if (!url.includes('http://') || !url.includes('https://')){
+    if (!url.includes('http://') && !url.includes('https://')){
         url = `http://${url}`
     }
     if(url.match(regEx)){
